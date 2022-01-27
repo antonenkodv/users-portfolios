@@ -14,7 +14,7 @@
 
 #### 3.  run migrations with command `npx sequelize-cli db:migrate`
 
-#### 4.  run seeders  with command`npx sequelize-cli db:seed:undo`
+#### 4.  run seeders  with command`npx sequelize-cli db:seed:all`
 
 #### run `npm run start`
 
