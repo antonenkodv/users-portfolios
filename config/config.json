@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "test_su",
+    "password": "qwerty12345",
+    "database": "users_profiles",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}

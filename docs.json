@@ -1,0 +1,130 @@
+[
+  // users/sign_up
+  {
+    need_header_token: "no",
+    input: {
+      name: "string",
+      password: "string",
+      email: "string"
+    },
+    output: {
+      ok: "boolean",
+      message: "string"
+    }
+  },
+  {
+    // users/sign_in
+    need_header_token: "no",
+    input: {
+      email: "string",
+      password: "string"
+    },
+    output: {
+      ok: "boolean",
+      token: "string",
+      refreshToken: "string",
+    }
+  },
+  {
+    need_header_token: "yes",
+    //users/logout
+    output: {
+      ok: "boolean",
+      message: "string"
+    }
+  },
+  {
+    // users/refresh_tokens
+    need_header_token: "yes",
+    input: {
+      refreshToken: "string"
+    },
+    output: {
+      ok: "boolean",
+      accessToken: "string",
+      refreshToken: "string"
+    }
+  },
+  {
+    // /users/delete'
+    need_header_token: "yes",
+    output : {
+      ok : "boolean",
+      message : "string"
+    }
+  },
+  {
+    // portfolio/create
+    need_header_token: "yes",
+    input: {
+      name: "string",
+      description: "string"
+    },
+    output: {
+      ok: "boolean",
+      message: "string"
+    }
+  },
+  {
+    // portfolio/get_user_portfolio
+    need_header_token: "yes",
+    input: {
+      header: "token",
+      output: {
+        ok: "boolean",
+        response: "object"
+      }
+    }
+  },
+  {
+    // portfolio/delete
+    input : {
+      portfolio_id : "uuid",
+    },
+    output: {
+      ok : "boolean",
+      message : "string"
+    }
+  },
+  {
+    // images/upload
+    need_header_token: "yes",
+    input: {
+      "form-data": "file",
+      description: "string",
+      portfolio_id: "string"
+    },
+    output: {
+      ok: "boolean",
+      filepath: "string"
+    }
+  },
+  // images/add_comment
+  {
+    need_header_token: "yes",
+    input: {
+      image_id: "uuid",
+      comment: "string"
+    },
+    output: {
+      ok: "boolean",
+      message: "string"
+    }
+  },
+  // images/get_all_images
+  {
+    need_header_token: "no",
+    output: {
+      ok: "boolean",
+      response: "object"
+    }
+  },
+  {
+    // images/get_all_images
+    input : {
+      filename : "uuid-string"
+    }
+  }
+]
+
+
